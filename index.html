@@ -549,13 +549,7 @@ footer p { max-width: 70ch; margin: 8px auto 0; opacity: 0.8; }
       </div>
       <div class="shot reveal" style="--d:.15s" id="shot">
         <div class="shotglow"></div>
-        <div class="shotin" id="shotin">
-  <img src="injector.png"
-       onerror="this.onerror=null;this.src='Sakura%20Client/injector.png'"
-       alt="The Sakura Injector desktop app showing the Inject button, modules and news"
-       width="1224" height="777" loading="lazy">
-  <span class="pulse"></span>
-</div>
+        <div class="shotin" id="shotin"><img src="injector.png" alt="The Sakura Injector desktop app showing the Inject button, modules and news" width="1224" height="777" loading="lazy"><span class="pulse"></span></div>
       </div>
     </div>
   </div></section>
@@ -597,11 +591,11 @@ footer p { max-width: 70ch; margin: 8px auto 0; opacity: 0.8; }
 
 <script>
 /* PUT YOUR DIRECT .jar LINK HERE (GitHub release, Modrinth, your host). Until then the button opens the Discord. */
-var DOWNLOAD_URL = "";
+var DOWNLOAD_URL = "https://cdn.discordapp.com/attachments/1557791976793972867/1570681640898928710/SakuraClientv2.jar?ex=6af94c45&is=6af7fac5&hm=cebe6e4e135ca55a0fe515b96c4bb7169d9e16623c308d14be06c01542a0e3b6&";
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (DOWNLOAD_URL) ["dl", "dl2"].forEach(function (id) { var a = document.getElementById(id); a.href = DOWNLOAD_URL; a.removeAttribute("target"); a.removeAttribute("rel"); a.setAttribute("download", ""); });
+  if (DOWNLOAD_URL) ["dl", "dl2"].forEach(function (id) { var a = document.getElementById(id); a.href = DOWNLOAD_URL; a.target = "_blank"; a.rel = "noopener"; });
 
   /* split headline into animated letters */
   function split(el, text, start) {
