@@ -384,11 +384,6 @@ footer p { max-width: 70ch; margin: 8px auto 0; opacity: 0.8; }
   .nav .btn { width: auto; }
   .floaty { display: none; }
 }
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-  html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; }
-}
 </style>
 
 <div class="moon" aria-hidden="true"></div>
@@ -603,7 +598,7 @@ footer p { max-width: 70ch; margin: 8px auto 0; opacity: 0.8; }
 /* PUT YOUR DIRECT .jar LINK HERE (GitHub release, Modrinth, your host). Until then the button opens the Discord. */
 var DOWNLOAD_URL = "SakuraClient-v2.jar";
 (function () {
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduce = false; /* animations always on */
 
   if (DOWNLOAD_URL) ["dl", "dl2"].forEach(function (id) { var a = document.getElementById(id); a.href = DOWNLOAD_URL; a.removeAttribute("target"); a.removeAttribute("rel"); a.setAttribute("download", "SakuraClient-v2.jar"); });
 
