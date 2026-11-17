@@ -1,4 +1,12 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#130e1b">
+<meta name="description" content="Sakura Client: a clean, visuals-first Fabric client for Minecraft 1.21.11. Free download.">
+<link rel="icon" href="icon.png">
+<style>:root{color-scheme:dark}body{margin:0}</style>
 <title>Sakura Client</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -408,6 +416,8 @@ footer p { max-width: 70ch; margin: 8px auto 0; opacity: 0.8; }
   </g>
   <g id="blossoms"><g class="bl a"></g><g class="bl b"></g><g class="bl c"></g></g>
 </svg>
+</head>
+<body>
 <canvas id="petals" aria-hidden="true"></canvas>
 <div class="stars" id="stars" aria-hidden="true"></div>
 <div class="progress" id="progress"></div>
@@ -591,11 +601,11 @@ footer p { max-width: 70ch; margin: 8px auto 0; opacity: 0.8; }
 
 <script>
 /* PUT YOUR DIRECT .jar LINK HERE (GitHub release, Modrinth, your host). Until then the button opens the Discord. */
-var DOWNLOAD_URL = "https://cdn.discordapp.com/attachments/1557791976793972867/1570681640898928710/SakuraClientv2.jar?ex=6af94c45&is=6af7fac5&hm=cebe6e4e135ca55a0fe515b96c4bb7169d9e16623c308d14be06c01542a0e3b6&";
+var DOWNLOAD_URL = "SakuraClient-v2.jar";
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (DOWNLOAD_URL) ["dl", "dl2"].forEach(function (id) { var a = document.getElementById(id); a.href = DOWNLOAD_URL; a.target = "_blank"; a.rel = "noopener"; });
+  if (DOWNLOAD_URL) ["dl", "dl2"].forEach(function (id) { var a = document.getElementById(id); a.href = DOWNLOAD_URL; a.removeAttribute("target"); a.removeAttribute("rel"); a.setAttribute("download", "SakuraClient-v2.jar"); });
 
   /* split headline into animated letters */
   function split(el, text, start) {
@@ -876,4 +886,5 @@ var DOWNLOAD_URL = "https://cdn.discordapp.com/attachments/1557791976793972867/1
 })();
 </script>
 
-</body></html>
+</body>
+</html>
